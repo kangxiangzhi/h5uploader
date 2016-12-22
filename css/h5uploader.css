@@ -1,0 +1,186 @@
+      
+        #h5uploader {
+            width: 100%;
+            min-height: 300px;
+            border: 1px solid #e5e5e5;
+            box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+            padding: 20px;
+        }
+        
+        #fileList {
+            width: 100%;
+            min-height: 260px;
+            border: 2px dashed #e6e6e6;
+        }
+        
+        
+        #placeholder {
+            width: 100%;
+            height: 100px;
+            background: url('../img/file.png') no-repeat;
+            background-position: 50% 50%;
+        }
+        
+        #filePicker {
+            display:block;
+            width: 168px;
+            height: 44px;
+            margin: 0 auto;
+            background-color: #09c7f7;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            line-height: 48px;
+            font-size: 20px;
+            border-radius: 3px;
+        }
+        
+        #drag_tip {
+            margin-top: 20px;
+            padding: 0;
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+            color: #666;
+        }
+
+        #toolBar{
+             margin-top:0px;
+             display:none;
+             border-top: 1px solid #eee,
+        }
+        #toolbar_tip {
+            margin: 10px;
+            padding: 0;
+            color: #555;
+            font-size: 14px;
+            width: 50%;
+            height: 40px;
+            line-height: 40px;
+        }
+        #btnGroup{
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            text-align:center;
+            line-height:40px;
+            font-size:18px;
+        }
+        #add_btn {
+            display:block;
+            width: 80px;
+            height: 40px;
+            background-color: #09c7f7;
+            color: white;
+            cursor:pointer;
+        }
+        
+        #upload_btn {
+            width: 80px;
+            height: 40px;
+            background-color: #09c7f7;
+            color: white;
+            cursor:pointer;
+     }
+
+     .imgbox{
+         position:relative;
+         height:110px;
+         width:130px;
+         margin:0 20px 20px 0;
+     }
+
+     .preview-img{
+         width:110px;
+         height:110px;
+     }
+
+     .delete-img{
+         position:absolute;
+         top:0;
+         cursor:pointer;
+         width:110px;
+         height:30px;
+         display:none;
+         background:url('../img/delete.png')  no-repeat 50% 50%  rgba(0,0,0,.05);
+     }
+
+     .preview-name{
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         margin:0;
+         padding:0;
+         width:100%;
+         height:20px;
+         color:#666;
+         font-size:14px;
+         text-align:center;
+         line-height:20px;
+     }
+
+
+     /**  上传时indicator**/
+     .upload-indicator{
+          display:none;
+          position:absolute;
+          margin:auto;
+          left:0;top:0;right:0;bottom:0;
+          width:50px;
+          height:50px;
+          background:rgba(0,0,0,0.4);
+      }
+      .wrap{
+          position:absolute;
+          width:25px;
+          height:50px;
+          top:0;
+          overflow:hidden;
+      }
+      .circle-right{
+          right:0;
+          
+      }
+      .circle-left{
+          left:0;
+      }
+      .circle{
+          position:absolute;
+          top:0;
+          width:50px;
+          height:50px;
+          border-radius:50%;
+          border:5px solid #eee;
+          box-sizing:border-box;
+      }
+      .rightCircle{
+          right:0;
+          border-top:5px solid green;
+          animation:rightCircle-animation 2s linear infinite;
+      }
+
+      .leftCircle{
+          left:0;
+          border-bottom:5px solid green;
+          animation:leftCircle-animation 2s linear infinite;
+      }
+      @keyframes rightCircle-animation{
+          0% {
+              transform:rotate(0deg);
+          }
+          50%,100%{
+              transform:rotate(225deg);
+          }
+      }
+
+      @keyframes leftCircle-animation{
+          0%,50%{
+              transform:rotate(-45deg);
+          }
+
+          100%{
+              transform:rotate(225deg);
+          }
+      }
